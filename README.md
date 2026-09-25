@@ -2,6 +2,8 @@
 
 An exploratory data analysis of the **Global Shark Attack File (GSAF)**, examining which activities and countries are most affected by shark attacks and how often those attacks are fatal.
 
+The presentation is available in the `presentation/` folder.
+
 ---
 
 ## Dataset
@@ -26,7 +28,7 @@ An exploratory data analysis of the **Global Shark Attack File (GSAF)**, examini
 
 ## Data cleaning & transformation
 
-All steps are wrapped in one reusable function, `[FUNCTION_NAME]()`, which returns the cleaned DataFrame `shark_clean`.
+All steps are wrapped in one reusable function that returns the cleaned DataFrame `shark_clean`.
 
 | # | Step | Details |
 |---|---|---|
@@ -40,47 +42,35 @@ All steps are wrapped in one reusable function, `[FUNCTION_NAME]()`, which retur
 
 ## Key findings
 
-**H1: Activities**
-[ADD FINDINGS]
+**H1: Activities ✅ Confirmed**
+- Surfing and swimming together account for about half of all attacks (~26% each).
+- Surfers are bitten about as often as swimmers, but die far less often: a fatality rate of ~12% vs. ~33% for swimmers.
 
-**H2: Countries**
-- USA, Australia and South Africa have the most recorded attacks.
+**H2: Countries ⚠️ Partly confirmed**
+- USA, Australia and South Africa account for about two-thirds of all recorded attacks.
 - Their fatality rates differ sharply: Australia 22.6%, South Africa 20.7%, USA only 8.4% (overall: 23.1%).
-- Since 2000, New Caledonia (41.0%) and Réunion (40.0%) have the highest fatality rates among countries with ≥20 incidents.
+- The deadliest locations are elsewhere: since 2000, New Caledonia (41.0%) and Réunion (40.0%) have the highest fatality rates among countries with ≥20 incidents.
 
-**H3: Type & fatality**
-[ADD FINDINGS]
+**H3: Type & fatality ✅ Confirmed**
+- 74% of all attacks are unprovoked.
+- 77% of attacks with a known outcome are non-fatal.
+- Unprovoked attacks are far deadlier than provoked ones: 24.5% vs. 3.3% fatal.
 
-**Limitations**
+## Limitations
+
 - Older records over-represent fatal cases (reporting bias), so all-time fatality rates are inflated for countries with many early entries.
 - The data contains no exposure information (e.g. number of surfers or swimmers), so counts show where attacks occur, not the risk per person.
 - 129 rows use Year = 0 as a placeholder for undated incidents.
-
-## Repository structure
-
-```
-├── data/
-│   └── GSAF5.xls
-├── notebooks/
-│   └── [NOTEBOOK_NAME].ipynb
-├── presentation/
-│   └── [FILENAME].pdf
-└── README.md
-```
 
 ## How to run
 
 ```bash
 pip install pandas xlrd
-jupyter notebook notebooks/[NOTEBOOK_NAME].ipynb
+jupyter notebook
 ```
 
 `xlrd` is required to read the legacy `.xls` format.
 
 ## Tools
 
-Python · pandas · [matplotlib / seaborn] · Jupyter
-
-## Authors
-
-[NAMES]
+Python · pandas · Jupyter
