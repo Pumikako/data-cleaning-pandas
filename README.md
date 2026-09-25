@@ -1,4 +1,4 @@
-# Shark Attacks: Who, Where and How Deadly?
+# Shark Attacks
 
 An exploratory data analysis of the **Global Shark Attack File (GSAF)**, examining which activities and countries are most affected by shark attacks and how often those attacks are fatal.
 
